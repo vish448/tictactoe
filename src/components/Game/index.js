@@ -61,25 +61,26 @@ function Game() {
 
     function reset() {
         //Clear all grids and winner message
+        setWinningText('')
     }
 
     return <div className="game">
         <h1>Tic Tac Toe</h1><br/>
-        <button className="reset" onClick={reset}>Reset</button>
+        <button className="reset" onClick={reset}>Reset</button><br/><br/>
         <div id="winning-text">{winningtext}</div>
-        <div className="row">
+        <div className="row row-1">
             <Box row={0} col={0} currentState={turn} changeTurn={changeTurn} />
             <Box row={0} col={1} currentState={turn} changeTurn={changeTurn} />
             <Box row={0} col={2} currentState={turn} changeTurn={changeTurn} />
         </div>
 
-        <div className="row">
+        <div className="row row-2">
             <Box row={1} col={0} currentState={turn} changeTurn={changeTurn} />
             <Box row={1} col={1} currentState={turn} changeTurn={changeTurn} />
             <Box row={1} col={2} currentState={turn} changeTurn={changeTurn} />
         </div>
 
-        <div className="row">
+        <div className="row row-3">
             <Box row={2} col={0} currentState={turn} changeTurn={changeTurn} />
             <Box row={2} col={1} currentState={turn} changeTurn={changeTurn} />
             <Box row={2} col={2} currentState={turn} changeTurn={changeTurn} />
