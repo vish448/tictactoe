@@ -10,3 +10,13 @@
 .row {
     display: flex;
 }
+
+button{
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    background-color: #72ae72;
+    color: white;
+    font-weight: bold;
+    outline: 0;
+}
