@@ -2,15 +2,17 @@ import React, { useState } from 'react'
 import './style.css'
 
 function Box(props) {
-    const [text, setText] = useState('')
-
+    const { value, changeTurn, row, col } = props;
+  
     function toggleText() {
-        if(text === '') {
-            setText(props.currentState)
-            props.changeTurn(props.row, props.col)
-        }
+      if (!value) {
+        changeTurn(row, col);
+      }
     }
-    return <div className="box" onClick={toggleText}>{text}</div>
-}
-
+    return (
+      <div className="box" onClick={toggleText}>
+        {value}
+      </div>
+    );
+  }
 export default Box
