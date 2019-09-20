@@ -6,7 +6,7 @@ function Game() {
     const [board, setBoard] = React.useState([[], [], []]);
     const [turn, setTurn] = React.useState("X");
     const [winningtext, setWinningText] = React.useState("");
-    console.log(board);
+    //console.log(board);
     function changeTurn(row, col) {
       const newBoard = [...board];
       const newRow = [...board[row]];
@@ -69,7 +69,7 @@ function Game() {
     }
   
     return (
-      <div className="game">
+      <>
         <h1>Tic Tac Toe</h1>
         <br />
         <button className="reset" onClick={reset}>
@@ -94,7 +94,7 @@ function Game() {
             });
           })}
         </div>
-      </div>
+      </>
     );
   }
 export default Game
